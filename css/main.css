@@ -29,6 +29,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
+
+input[type=text] {
+     -webkit-appearance: none; -moz-appearance: none;
+}
+
+input:focus {outline:0;}
+
 .img-centered {
     margin: 0 auto;
 }
@@ -44,12 +51,15 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #fed136;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    font-weight: 700;
+    letter-spacing: 1px;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
     color: #fff;
     background-color: #000;
     border-color: #000;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
 }
 .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
     background-image: none;
@@ -68,15 +78,26 @@ h1, h2, h3, h4, h5, h6 {
     border:2px solid #000;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    font-weight: 700;
+    letter-spacing: 1px;
     border-radius: 3px;
     font-size: 18px;
     padding: 20px 40px;
+    position: relative;
+    top:119px;
 }
+@media (min-width: 768px) {
+    .btn-xl {
+        position: inherit;
+    }
+}
+
 .btn-xl:hover, .btn-xl:focus, .btn-xl:active, .btn-xl.active, .open .dropdown-toggle.btn-xl {
     color: #fff;
     background-color: #000000;
     border-color: #000000;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
 }
 .btn-xl:active, .btn-xl.active, .open .dropdown-toggle.btn-xl {
     background-image: none;
@@ -99,20 +120,20 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:active, .navbar-default .navbar-brand.active {
-    color: #000000;
+    color: #ffffff;
 }
 .navbar-default .navbar-collapse {
     border-color: rgba(255, 255, 255, .02);
 }
 .navbar-default .navbar-toggle {
-    background-color: #f59a1d;
-    border-color: #f59a1d;
+    background-color: #ffffff;
+    border-color: #ffffff;
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
+    background-color: #000;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: #fed136;
+    background-color: #ffffff;
 }
 .navbar-default .nav li a {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -120,13 +141,15 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     letter-spacing: 1px;
     color: #fff;
+    font-size:16pt;
 }
 .navbar-default .nav li a:hover, .navbar-default .nav li a:focus {
-    color: #000000;
+    color: #1b78b6;
     outline: 0;
+    border-radius:100%;
 }
 .navbar-default .navbar-nav>.active>a {
-    border-radius: 0;
+    border-radius: 3px;
     color: #000;
     background-color: #fff;
 }
@@ -268,15 +291,16 @@ section#sign-up {
     background-color: #fff;
     border:1px solid #000;
     color:#000;
-    border-radius: 0px;
+    border-radius: 3px;
     cursor: pointer;
     cursor: hand;
 }
 
 .newsletter input {
     margin-right:5px;
-    padding:10px;
+    padding:11px;
     width:100%;
+    border-radius: 3px;
     border:1px solid #000;
 }
 
